@@ -1,3 +1,5 @@
+from enums.Comprador import Comprador
+
 class User:
     def __init__(self, user_id, name, identification, address, phone_number, email, comprador):
         self.user_id = user_id
