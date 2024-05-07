@@ -63,6 +63,14 @@ class ProductService:
                 return product
         return None
 
+    def get_product_by_sku(self, sku):
+        # Permite al usuario consultar un producto por su SKU.
+        product = self.find_product_by_sku(sku)
+        if product:
+            print(f"Producto encontrado: {product.name}")
+        else:
+            print("¡Producto no encontrado!")
+
     def delete_product(self):
        # Permite al usuario eliminar un producto de la lista de productos.
         sku = input("SKU del producto a eliminar: ")

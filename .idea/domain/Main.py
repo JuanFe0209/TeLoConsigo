@@ -66,8 +66,9 @@ def manage_products(product_service):
         print("\nMenú de Gestión de Productos")
         print("1. Agregar producto")
         print("2. Actualizar producto")
-        print("3. Eliminar producto")
-        print("4. Volver al menú principal")
+        print("3. Consultar producto por SKU")
+        print("4. Eliminar producto")
+        print("5. Volver al menú principal")
         option = input("Seleccione una opción: ")
 
         if option == "1":
@@ -75,8 +76,11 @@ def manage_products(product_service):
         elif option == "2":
             product_service.edit_product()
         elif option == "3":
-            product_service.delete_product()
+            sku = input("Ingrese el SKU del producto a consultar: ")
+            product_service.get_product_by_sku(sku)
         elif option == "4":
+            product_service.delete_product()
+        elif option == "5":
             print("Volviendo al menú principal...")
             break
         else:

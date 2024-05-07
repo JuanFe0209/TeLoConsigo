@@ -64,12 +64,15 @@ class UserService:
         message = notification_handler.send_message(user)
         print(message)
 
+
+
     def find_by_id(self, user_id):
         # Buscamos al usuario por su ID en la lista de usuarios
         for user in self.users:
             if user.user_id == user_id:
                 return user
         return None
+
 
     def delete_user(self, user_id):
         # Buscamos al usuario por su ID y lo eliminamos de la lista de usuarios
